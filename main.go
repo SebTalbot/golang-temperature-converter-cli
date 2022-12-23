@@ -28,6 +28,10 @@ func main() {
 
 	originUnit := strings.ToUpper(os.Args[1])
 
+	if originUnit != "C" && originUnit != "F" {
+		printError(errInvalidArguments)
+	}
+
 	for {
 		fmt.Print("What is the current temperature in " + originUnit + " ? ")
 
